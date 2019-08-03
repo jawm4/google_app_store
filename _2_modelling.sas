@@ -1,7 +1,7 @@
 /*
 LADOWANIE DANYCH I GENEROWANIE PODSTAWOWYCH INFORMACJI NA TEMAT DANYCH
 */
-proc import file='C:\Users\mjawo\Desktop\portfolio\google_app_store\log_google.csv'
+proc import file='\google_app_store\log_google.csv'
 out=abc.log_google
 dmbs=csv
 ;
@@ -33,7 +33,7 @@ run;
 IMPUTACJA WIELOKROTNA
 */
 
-ods pdf file='C:\Users\mjawo\Desktop\portfolio\google_app_store\wyniki.pdf';
+ods pdf file='\google_app_store\wyniki.pdf';
 /* Wypelnianie danych
 SEED zapewnia reprodukcje danych wyników*/
 proc mi data=google nimpute=100 seed=123 out=abc.google_fcs;
@@ -57,11 +57,11 @@ MODELEFFECTS INTERCEPT Installs Reviews Free;
 RUN;
 ods pdf close;
 
-ods pdf file='C:\Users\mjawo\Desktop\portfolio\google_app_store\wyniki_no_missings.pdf';
+ods pdf file='\google_app_store\wyniki_no_missings.pdf';
 
 
 /*MODEL NA ZBIORZE PO USUNIECIU MISSINGOW*/
-proc import file='C:\Users\mjawo\Desktop\portfolio\google_app_store\log_google_no_missings.csv'
+proc import file='\google_app_store\log_google_no_missings.csv'
 out=abc.log_google_no_missings
 dmbs=csv
 ;
@@ -78,10 +78,10 @@ run;
 ods pdf close;
 
 
-ods pdf file='C:\Users\mjawo\Desktop\portfolio\google_app_store\wyniki_mediana.pdf';
+ods pdf file='\google_app_store\wyniki_mediana.pdf';
 
 /*MODEL Z IMPUTOWANA MEDIANA*/
-proc import file='C:\Users\mjawo\Desktop\portfolio\google_app_store\log_google_median.csv'
+proc import file='\google_app_store\log_google_median.csv'
 out=abc.log_google_median
 dmbs=csv
 ;
