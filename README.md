@@ -1,4 +1,4 @@
-# Google App Store - Comparison of Imputation Methods
+# Google App Store - Comparison of Data Imputation Methods
 (project written in Polish as an assignment for Advanced Business Analytics course at Warsaw School of Economics)
 
 # Summary
